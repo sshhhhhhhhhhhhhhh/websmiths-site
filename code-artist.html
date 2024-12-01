@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Shahin Alakbarli & Said Bakirov & Araz Nabizade
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WebSmiths Code Art Page </title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<html>
+    <header>
+         <div class="top-bar">
+             <img src="media/team_logo.jpg" alt="WebSmiths Logo">
+             <p> WebSmiths - Crafting the Web of Tomorrow </p>
+        </div>
+
+
+        <div class="main-header">
+            <h1> Code Art Generator </h1>
+            <section id="team-motto">
+                <h2> How to USE </h2>
+                <p id="motto-text"> "Upload your image, choose your settings, and create the <strong> MASTERPIECE! </strong>" </p>
+            </section>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="team-members.html">Team Members</a></li>
+                    <li><a href="hour-of-code.html">Hour of Code Event</a></li>
+                    <li><a href="web-project.html">Our Project</a></li>
+                    <li><a href="code-artist.html" class="active">Code Art Page</a></li>
+                    <li><a href="https://shattereddisk.github.io/rickroll/rickroll.mp4" target="_blank"> Have Fun! </a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="algo-desc">
+            <h2>Algorithm Descriptions</h2>
+            <div class="desc-grid">
+                <div class="algo-card">
+                    <h3>⭐ Star Algorithm</h3>
+                    <p>
+                        The Star algorithm generates a pattern of lines radiating from the center, creating a starburst effect. 
+                        Each line is drawn at a random angle, and its length varies within a specified radius. The density of the lines 
+                        controls the tightness of the star, resulting in a visually stunning radial pattern.
+                    </p>
+                </div>
+                <div class="algo-card">
+                    <h3>🔵 Spiral Algorithm</h3>
+                    <p>
+                        The Spiral algorithm creates a flowing spiral pattern by incrementally increasing the radius while rotating around 
+                        the center. The angle increment and radius growth determine the tightness and coverage of the spiral. This algorithm 
+                        offers a dynamic and motion-like visual effect.
+                    </p>
+                </div>
+                <div class="algo-card">
+                    <h3>🌊 Wave Algorithm</h3>
+                    <p>
+                        The Wave algorithm generates a dynamic sinusoidal wave pattern across the canvas. The amplitude determines the height of the crests 
+                        and troughs, while the frequency defines the number of waves stretching across the width. This algorithm blends the rhythmic motion 
+                        of waves with the image, resulting in a smooth and energetic visual effect.
+                    </p>
+                </div>
+
+                <div class="algo-card">
+                    <h3>☀️ Radial Burst Algorithm</h3>
+                    <p>
+                        The Radial Burst algorithm creates an explosion-like pattern radiating outward from the center. By generating evenly spaced lines at multiple angles, 
+                        the algorithm produces a sharp, dynamic burst effect. The number of rays and their thickness can be adjusted to craft anything from subtle bursts 
+                        to powerful explosions, making it a versatile addition to the visual repertoire.
+                    </p>
+                </div>
+                <div class="algo-card">
+                    <h3>🌳 Fractal Tree Algorithm</h3>
+                    <p>
+                        The Fractal Tree algorithm creates a recursive branching pattern that emulates the growth of a natural tree. Starting from a single trunk, each branch splits into smaller branches at specified angles and lengths, forming a complex and visually captivating fractal structure. By adjusting parameters like branch length and angle, you can generate a wide variety of tree shapes, adding depth and organic beauty to your art.
+                    </p>
+                </div>
+                <div class="algo-card">
+                    <h3>🎨 Pixel Art Algorithm</h3>
+                    <p>
+                        The Pixel Art algorithm transforms your image into a retro-style mosaic by breaking it into large square blocks, each filled with a single averaged color. 
+                        The size of the blocks, or "pixels," can be adjusted to create a detailed or abstract aesthetic. This algorithm adds a playful and nostalgic touch, 
+                        reminiscent of classic 8-bit and 16-bit video game art styles which makes it a simple yet effective visual transformation.
+                    </p>
+                </div>
+                
+
+            </div>
+        </section>
+        <section >
+            <label for="imageUpload">Upload Your Image</label>
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="figureSelect">Select a Figure</label>
+            <select id="figureSelect">
+                <option value="star">Star</option>
+                <option value="spiral">Spiral</option>
+                <option value="wave"> Wave </option>
+                <option value="radial"> Radial Burst </option>
+                <option value="fractal"> Fractal Tree </option>
+                <option value="pixel">Pixel Art</option>
+            </select>
+
+            <div id="starSettings" class="settingsPanel">
+                <label for="intensity">Star Intensity</label>
+                <input type="range" id="intensity" min="500" max="50000" step="500" value="10000">
+            </div>
+
+            <div id="spiralSettings" class="settingsPanel" style="display: none;">
+                <label for="angle">Angle Increment</label>
+                <input type="range" id="angle" min="0.1" max="3" step="0.1" value="0.5">
+
+                <label for="radiusGrowth">Radius Growth</label>
+                <input type="range" id="radiusGrowth" min="1" max="20" step="1" value="20">
+            </div>
+            
+            <div id="waveSettings" class="settingsPanel" style="display: none;">
+                <label for="waveAmplitude">Wave Amplitude:</label>
+                <input type="range" id="waveAmplitude" min="10" max="400" step="10" value="200">
+                <label for="waveFrequency">Wave Frequency:</label>
+                <input type="range" id="waveFrequency" min="1" max="100" step="1" value="5">
+            </div>
+
+            <div id="radialSettings" class="settingsPanel" style="display: none;">
+                <label for="burstCount">Number of Bursts:</label>
+                <input type="range" id="burstCount" min="1" max="20" value="5">
+                
+                <label for="burstSize">Burst Size:</label>
+                <input type="range" id="burstSize" min="100" max="1000" value="500">
+            </div>
+
+            <div id="fractalSettings" class="settingsPanel" style="display: none;">
+                <label for="branchLength">Branch Length:</label>
+                <input type="range" id="branchLength" min="10" max="200" step="10" value="100">
+            
+                <label for="branchAngle">Branch Angle:</label>
+                <input type="range" id="branchAngle" min="1" max="90" step="1" value="15">
+            </div>
+            
+            <div id="pixelSettings" class="settingsPanel" style="display: none;">
+                <label for="pixelSize">Pixel Size:</label>
+                <input type="range" id="pixelSize" min="5" max="100" step="5" value="20">
+            </div>            
+
+            <button id="createArtButton">Create the Masterpiece</button>
+            <button id="downloadButton" style="display: none;">Download Art</button>
+        </section>
+
+        <canvas id="artCanvas"></canvas>
+    </main>
+
+
+    <footers>
+        <p> &copy; 2024 WebSmiths Website. All rights reserved.</p>
+        <br> <br>
+        <img src="media/ada_logo_white.png" alt="University Logo">
+        <span class="seperator"> | </span>
+        <img src="media/team_logo.jpg" alt="Team Logo"> 
+    </footers>
+    <script src="code-art-script.js"></script>
+</html>
